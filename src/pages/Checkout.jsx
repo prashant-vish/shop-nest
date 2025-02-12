@@ -19,7 +19,7 @@ const products = [
     price: "$90.00",
     quantity: 1,
     imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+      "https://tailwindui.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
     imageAlt:
       "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
   },
@@ -31,7 +31,7 @@ const products = [
     price: "$32.00",
     quantity: 1,
     imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
+      "https://tailwindui.com/plus-assets/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
     imageAlt:
       "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
   },
@@ -227,19 +227,19 @@ const Checkout = () => {
                   </div>
                 </div>
                 <div className="mt-6 flex items-center justify-end gap-x-6">
-                <button
-                  type="button"
-                  className="text-sm/6 font-semibold text-gray-900"
-                >
-                  Reset
-                </button>
-                <button
-                  type="submit"
-                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Add Address
-                </button>
-              </div>
+                  <button
+                    type="button"
+                    className="text-sm/6 font-semibold text-gray-900"
+                  >
+                    Reset
+                  </button>
+                  <button
+                    type="submit"
+                    className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Add Address
+                  </button>
+                </div>
 
                 <div className="border-b border-gray-900/10 pb-12">
                   <h2 className="text-base/7 font-semibold text-gray-900">
@@ -326,7 +326,6 @@ const Checkout = () => {
                   </div>
                 </div>
               </div>
-
             </form>
           </div>
           <div className="lg:col-span-2">
