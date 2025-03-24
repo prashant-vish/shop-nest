@@ -7,7 +7,7 @@ export function fetchAllProducts() {
   });
 }
 export function fetchAllProductsByFilters(filter) {
-  // TODO we will not hardcode it
+
   let queryString = "";
   for (let key in filter) {
     queryString += `${key}=${filter[key]}&`;

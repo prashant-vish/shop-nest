@@ -129,9 +129,16 @@ const ProductList = () => {
   const [filter, setFilter] = useState({});
 
   const handleFilter = (e, section, option) => {
-    const newFilter = { ...filter, [section.id]: option.value };
+    console.log("option", e.target.checked);
+    const newFilter = { ...filter };
+    if (e.target.checked) {
+      newFilter[section.id] = option.value;
+    } else {
+      delete newFilter[section.id];
+    }
+
     setFilter(newFilter);
-    dispatch(fetchProductsByFiltersAsync(newFilter));
+    // dispatch(fetchProductsByFiltersAsync(newFilter));
     console.log(section.id, option.value);
   };
   const handleSort = (e, option) => {
@@ -142,8 +149,8 @@ const ProductList = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchAllProductsAsync());
-  }, []);
+    dispatch(fetchProductsByFiltersAsync(filter));
+  }, [dispatch, filter]);
 
   return (
     <div className="bg-white">

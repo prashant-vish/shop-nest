@@ -5924,6 +5924,7 @@ const products = [
 const categories = [...new Set(products.map((p) => p.brand))];
 
 console.log(categories);
+
 console.log(
   categories.map((c) => ({
     value: c,
