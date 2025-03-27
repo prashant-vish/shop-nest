@@ -1,16 +1,26 @@
 export function fetchAllProducts() {
-  // TODO we will not hardcode it
+  // Todo: We will not hard-code server-url here
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/products");
     const data = await response.json();
     resolve({ data });
   });
 }
-export function fetchAllProductsByFilters(filter) {
+export function fetchAllProductsByFilters(filter, sort) {
+  //filter={"category":["smartphone", "laptops"]}
+  //sort ={_sort:"price",_order:"desc"}
+  //Todo: on server we will support multiple values in filters
 
   let queryString = "";
   for (let key in filter) {
-    queryString += `${key}=${filter[key]}&`;
+    const categoryValues = filter[key];
+    if (categoryValues.length > 0) {
+      const lastCategoryValue = categoryValues[categoryValues.length - 1];
+      queryString += `${key}=${lastCategoryValue}&`;
+    }
+  }
+  for (let key in sort) {
+    queryString += `${key}=${sort[key]}&`;
   }
   return new Promise(async (resolve) => {
     const response = await fetch(

@@ -5,7 +5,7 @@ const initialState = {
   products: [],
   status: "idle",
 };
-
+// To get all the products from the Backend/ json-server
 export const fetchAllProductsAsync = createAsyncThunk(
   "product/fetchAllProducts",
   async () => {
@@ -13,10 +13,12 @@ export const fetchAllProductsAsync = createAsyncThunk(
     return response.data;
   }
 );
+
+// To get all the products from the Backend / json-server after the filters are applied
 export const fetchProductsByFiltersAsync = createAsyncThunk(
-  "product/fetchProductsByFiltersAsync",
-  async (filter) => {
-    const response = await fetchAllProductsByFilters(filter);
+  "product/fetchProductsByFilters",
+  async ({ filter, sort }) => {
+    const response = await fetchAllProductsByFilters(filter, sort);
     return response.data;
   }
 );
