@@ -41,6 +41,8 @@ export function fetchAllProductsByFilters(filter, sort, pagination) {
     );
     const data = await response.json();
     // This was not working here so i used fetchTotalItems function to implement the same
+
+    // Todo: Fix this issue in order to get total items in cases of sorting to so that is show actual number not all 100.
     // const totalItems = await response.headers.get("X-Total-Count");
     const totalItems = await fetchTotalItems();
     resolve({ data: { products: data.data, totalItems: +totalItems } });
