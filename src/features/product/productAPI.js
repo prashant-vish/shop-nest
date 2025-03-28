@@ -6,6 +6,14 @@ export function fetchAllProducts() {
     resolve({ data });
   });
 }
+export function fetchProductById(id) {
+  // Todo: We will not hard-code server-url here
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/products/" + id);
+    const data = await response.json();
+    resolve({ data });
+  });
+}
 async function fetchTotalItems() {
   const response = await fetch("http://localhost:8080/products?");
   const data = await response.json();
@@ -48,7 +56,6 @@ export function fetchAllProductsByFilters(filter, sort, pagination) {
     resolve({ data: { products: data.data, totalItems: +totalItems } });
   });
 }
-
 
 export function fetchCategories() {
   // Todo: We will not hard-code server-url here
