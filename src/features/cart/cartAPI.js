@@ -40,6 +40,17 @@ export function deleteItemFromCart(itemId) {
     });
     const data = await response.json();
     // Todo: ON server it will only return some info of user (not password)
-    resolve({ data:{id:itemId } });
+    resolve({ data: { id: itemId } });
+  });
+}
+export function resetCart(userId) {
+  // get all the items from the api -> then delete them
+  return new Promise(async (resolve) => {
+    const response = await fetchItemsByUserId(userId);
+    const items = response.data;
+    for (let item of items) {
+      await deleteItemFromCart(item.id);
+    }
+    resolve({ status: "success" });
   });
 }
