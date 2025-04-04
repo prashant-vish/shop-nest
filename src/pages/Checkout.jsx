@@ -70,6 +70,7 @@ const Checkout = () => {
       user,
       paymentMethod,
       selectItems,
+      selectedAddress,
       status: "pending", // can be received / delivered and many more based on companies preferences
     };
     dispatch(createOrderAsync(order));
