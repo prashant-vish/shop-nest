@@ -6272,15 +6272,6 @@
       "password": "Prashant@320",
       "addresses": [
         {
-          "name": "Prashant Vishwakarma",
-          "email": "vishwakarma0216@gmail.com",
-          "phone": "09838574409",
-          "street": "Kamla Nehru Institute of technology, Ramanujan C06",
-          "city": "Sultanpur",
-          "state": "Uttar Pradesh",
-          "pinCode": "228118"
-        },
-        {
           "name": "NIshant",
           "email": "nishant@gmail.com",
           "phone": "8840882821",
@@ -6572,6 +6563,113 @@
         "city": "Ghazipur",
         "state": "Uttar Pradesh",
         "pinCode": "233304"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "34d3",
+      "items": [
+        {
+          "id": "d4cb",
+          "title": "Gucci Bloom Eau de",
+          "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+          "category": "fragrances",
+          "price": 79.99,
+          "discountPercentage": 8.9,
+          "rating": 2.69,
+          "stock": 93,
+          "tags": [
+            "fragrances",
+            "perfumes"
+          ],
+          "brand": "Gucci",
+          "sku": "FFKZ6HOF",
+          "weight": 10,
+          "dimensions": {
+            "width": 22.28,
+            "height": 17.81,
+            "depth": 27.18
+          },
+          "warrantyInformation": "No warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Great value for money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Aria Parker",
+              "reviewerEmail": "aria.parker@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Natalie Harris",
+              "reviewerEmail": "natalie.harris@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Ava Harris",
+              "reviewerEmail": "ava.harris@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 10,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "8232190382069",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/1.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/2.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png",
+          "quantity": 1,
+          "user": "53b0"
+        }
+      ],
+      "totalAmount": 79.99,
+      "totalItems": 1,
+      "user": {
+        "id": "53b0",
+        "email": "vishwakarma0216@gmail.com",
+        "password": "Prashant@320",
+        "addresses": [
+          {
+            "name": "Prashant Vishwakarma",
+            "email": "vishwakarma0216@gmail.com",
+            "phone": "09838574409",
+            "street": "Kamla Nehru Institute of technology, Ramanujan C06",
+            "city": "Sultanpur",
+            "state": "Uttar Pradesh",
+            "pinCode": "228118"
+          },
+          {
+            "name": "NIshant",
+            "email": "nishant@gmail.com",
+            "phone": "8840882821",
+            "street": "12th maini",
+            "city": "Prayagraj",
+            "state": "Uttar Pradesh",
+            "pinCode": "334444"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Prashant Vishwakarma",
+        "email": "vishwakarma0216@gmail.com",
+        "phone": "09838574409",
+        "street": "Kamla Nehru Institute of technology, Ramanujan C06",
+        "city": "Sultanpur",
+        "state": "Uttar Pradesh",
+        "pinCode": "228118"
       },
       "status": "pending"
     }
