@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { selectLoggedInUser, createUserAsync } from "../authSlice";
 
-
 const Signup = () => {
   const {
     register,
@@ -36,7 +35,11 @@ const Signup = () => {
           <form
             onSubmit={handleSubmit((data) => {
               dispatch(
-                createUserAsync({ email: data.email, password: data.password })
+                createUserAsync({
+                  email: data.email,
+                  password: data.password,
+                  addresses: [],
+                })
               );
               console.log({ data });
             })}
