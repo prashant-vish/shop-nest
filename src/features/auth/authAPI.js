@@ -29,3 +29,10 @@ export function checkUser(loginInfo) {
     // Todo: ON server it will only return some info of user (not password)
   });
 }
+
+export function signOut(userId) {
+  return new Promise(async (resolve) => {
+    // Todo: ON server it will remove session info
+    resolve({ data: "success" });
+  });
+}
