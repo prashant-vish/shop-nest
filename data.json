@@ -6272,13 +6272,22 @@
       "password": "Prashant@320",
       "addresses": [
         {
-          "name": "NIshant",
+          "name": " Nishant Vishwakarma",
           "email": "nishant@gmail.com",
           "phone": "8840882821",
           "street": "12th maini",
           "city": "Prayagraj",
           "state": "Uttar Pradesh",
           "pinCode": "334444"
+        },
+        {
+          "name": "Jack Murphy",
+          "email": "jack@gmail.com",
+          "city": "Los Angeles",
+          "state": "New York",
+          "phone": "9000002222",
+          "street": "12th main Los Angeles",
+          "pinCode": "122220"
         }
       ]
     },
@@ -6670,6 +6679,312 @@
         "city": "Sultanpur",
         "state": "Uttar Pradesh",
         "pinCode": "228118"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c6f4",
+      "items": [
+        {
+          "id": "43b0",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 3,
+          "user": "53b0"
+        }
+      ],
+      "totalAmount": 29.97,
+      "totalItems": 3,
+      "user": {
+        "id": "53b0",
+        "email": "vishwakarma0216@gmail.com",
+        "password": "Prashant@320",
+        "addresses": [
+          {
+            "name": "NIshant",
+            "email": "nishant@gmail.com",
+            "phone": "8840882821",
+            "street": "12th maini",
+            "city": "Prayagraj",
+            "state": "Uttar Pradesh",
+            "pinCode": "334444"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "NIshant",
+        "email": "nishant@gmail.com",
+        "phone": "8840882821",
+        "street": "12th maini",
+        "city": "Prayagraj",
+        "state": "Uttar Pradesh",
+        "pinCode": "334444"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9c76",
+      "items": [
+        {
+          "id": "de62",
+          "title": "Dolce Shine Eau de",
+          "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+          "category": "fragrances",
+          "price": 69.99,
+          "discountPercentage": 11.47,
+          "rating": 2.68,
+          "stock": 3,
+          "tags": [
+            "fragrances",
+            "perfumes"
+          ],
+          "brand": "Dolce & Gabbana",
+          "sku": "1NBFK980",
+          "weight": 5,
+          "dimensions": {
+            "width": 17,
+            "height": 24.57,
+            "depth": 13.3
+          },
+          "warrantyInformation": "5 year warranty",
+          "shippingInformation": "Ships in 1-2 business days",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Xavier Wright",
+              "reviewerEmail": "xavier.wright@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Poor quality!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Mila Hernandez",
+              "reviewerEmail": "mila.hernandez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very happy with my purchase!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Sophia Brown",
+              "reviewerEmail": "sophia.brown@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 9,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "1939383392674",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/1.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/2.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png",
+          "quantity": 3,
+          "user": "53b0"
+        }
+      ],
+      "totalAmount": 209.96999999999997,
+      "totalItems": 3,
+      "user": {
+        "id": "53b0",
+        "email": "vishwakarma0216@gmail.com",
+        "password": "Prashant@320",
+        "addresses": [
+          {
+            "name": " Nishant Vishwakarma",
+            "email": "nishant@gmail.com",
+            "phone": "8840882821",
+            "street": "12th maini",
+            "city": "Prayagraj",
+            "state": "Uttar Pradesh",
+            "pinCode": "334444"
+          },
+          {
+            "name": "Jack Murphy",
+            "email": "jack@gmail.com",
+            "city": "Los Angeles",
+            "state": "New York",
+            "phone": "9000002222",
+            "street": "12th main Los Angeles",
+            "pinCode": "122220"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Jack Murphy",
+        "email": "jack@gmail.com",
+        "city": "Los Angeles",
+        "state": "New York",
+        "phone": "9000002222",
+        "street": "12th main Los Angeles",
+        "pinCode": "122220"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2878",
+      "items": [
+        {
+          "id": "5c61",
+          "title": "Milk",
+          "description": "Fresh and nutritious milk, a staple for various recipes and daily consumption.",
+          "category": "groceries",
+          "price": 3.49,
+          "discountPercentage": 15.09,
+          "rating": 3.14,
+          "stock": 57,
+          "tags": [
+            "dairy"
+          ],
+          "sku": "VOZKMF40",
+          "weight": 1,
+          "dimensions": {
+            "width": 22.42,
+            "height": 20.9,
+            "depth": 12.48
+          },
+          "warrantyInformation": "6 months warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Daniel Cook",
+              "reviewerEmail": "daniel.cook@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Awesome product!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Nora Mills",
+              "reviewerEmail": "nora.mills@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great value for money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Jacob Cooper",
+              "reviewerEmail": "jacob.cooper@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 41,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "6340035595037",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Milk/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Milk/thumbnail.png",
+          "quantity": 3,
+          "user": "53b0"
+        }
+      ],
+      "totalAmount": 10.47,
+      "totalItems": 3,
+      "user": {
+        "id": "53b0",
+        "email": "vishwakarma0216@gmail.com",
+        "password": "Prashant@320",
+        "addresses": [
+          {
+            "name": " Nishant Vishwakarma",
+            "email": "nishant@gmail.com",
+            "phone": "8840882821",
+            "street": "12th maini",
+            "city": "Prayagraj",
+            "state": "Uttar Pradesh",
+            "pinCode": "334444"
+          },
+          {
+            "name": "Jack Murphy",
+            "email": "jack@gmail.com",
+            "city": "Los Angeles",
+            "state": "New York",
+            "phone": "9000002222",
+            "street": "12th main Los Angeles",
+            "pinCode": "122220"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Jack Murphy",
+        "email": "jack@gmail.com",
+        "city": "Los Angeles",
+        "state": "New York",
+        "phone": "9000002222",
+        "street": "12th main Los Angeles",
+        "pinCode": "122220"
       },
       "status": "pending"
     }
