@@ -20,6 +20,8 @@ import Logout from "./features/auth/components/Logout";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
 import AdminProductDetailPage from "./pages/AdminProductDetailPage";
+import AdminHome from "./pages/AdminHome";
+import AdminProductFormPage from "./pages/AdminProductFormPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,7 +49,7 @@ function App() {
           path="/admin"
           element={
             <ProtectedAdmin>
-              <Home />
+              <AdminHome />
             </ProtectedAdmin>
           }
         ></Route>
@@ -75,6 +77,14 @@ function App() {
             <Protected>
               <ProductDetailPage />
             </Protected>
+          }
+        />
+        <Route
+          path="/admin/product-form"
+          element={
+            <ProtectedAdmin>
+              <AdminProductFormPage />
+            </ProtectedAdmin>
           }
         />
         <Route

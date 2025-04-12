@@ -191,7 +191,14 @@ const AdminProductList = () => {
               {/* Product grid */}
               <div className="lg:col-span-3">
                 {/* Your content */}
-
+                <div>
+                  <Link
+                    to={"/admin/product-form"}
+                    className="rounded-md cursor-pointer mx-8 my-5 bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Add New Product
+                  </Link>
+                </div>
                 <ProductGrid products={products} />
               </div>
             </div>
@@ -508,7 +515,7 @@ function ProductGrid({ products }) {
 
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 ">
             {products.map((product) => (
-              <Link to={`/product-detail/${product.id}`}>
+              <Link to={`/admin/product-detail/${product.id}`}>
                 <div
                   key={product.id}
                   className=" group relative border-solid border-2 border-gray-200 p-1 rounded-sm"
@@ -546,6 +553,11 @@ function ProductGrid({ products }) {
                       </p>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <button className="rounded-md cursor-pointer my-5 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Edit Product
+                  </button>
                 </div>
               </Link>
             ))}

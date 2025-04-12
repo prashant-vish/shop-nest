@@ -106,18 +106,18 @@ export default function ProductDetail() {
             <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
               <img
                 alt={product.title}
-                src={product.images[0]}
+                src={product.images[1] ?? product.images[0]}
                 className="aspect-3/2 w-full rounded-lg object-cover"
               />
               <img
                 alt={product.title}
-                src={product.images[0]}
+                src={product.images[2] ?? product.images[0]}
                 className="aspect-3/2 w-full rounded-lg object-cover"
               />
             </div>
             <img
               alt={product.title}
-              src={product.images[0]}
+              src={product.images[3] ?? product.images[0]}
               className="aspect-4/5 size-full object-cover sm:rounded-lg lg:aspect-auto"
             />
           </div>

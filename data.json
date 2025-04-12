@@ -6007,6 +6007,23 @@
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
+    },
+    {
+      "id": "db94",
+      "title": "Macbook Air 2023",
+      "description": "Macbook Air 2023",
+      "brand": "Apple",
+      "category": "laptops",
+      "price": "1983",
+      "discountPercentage": "5",
+      "stock": "100",
+      "thumbnail": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+      "images": [
+        "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+        "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg"
+      ]
     }
   ],
   "brands": [
@@ -6313,7 +6330,7 @@
       "email": "admin@gmail.com",
       "password": "Admin@320",
       "addresses": [],
-      "role": "user"
+      "role": "admin"
     }
   ],
   "cart": [
