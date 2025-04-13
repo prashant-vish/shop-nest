@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  increment,
   fetchAllProductsAsync,
   fetchProductsByFiltersAsync,
   selectAllProducts,

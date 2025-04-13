@@ -88,6 +88,14 @@ function App() {
           }
         />
         <Route
+          path="/admin/product-form/edit/:id"
+          element={
+            <ProtectedAdmin>
+              <AdminProductFormPage />
+            </ProtectedAdmin>
+          }
+        />
+        <Route
           path="/admin/product-detail/:id"
           element={
             <ProtectedAdmin>

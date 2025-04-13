@@ -2,22 +2,67 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  clearSelectedProduct,
   createProductAsync,
+  fetchProductByIdAsync,
   selectBrands,
   selectCategories,
+  selectProductById,
+  updateProductAsync,
 } from "../../product/productSlice";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const ProductForm = () => {
   const {
     register,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
   const dispatch = useDispatch();
+  const params = useParams();
+  const selectedProduct = useSelector(selectProductById);
+  useEffect(() => {
+    if (params.id) {
+      dispatch(fetchProductByIdAsync(params.id));
+    }
+    else{
+      dispatch(clearSelectedProduct())
+    }
+  }, [dispatch, params.id]);
 
+  useEffect(() => {
+    if (selectedProduct) {
+      setValue("title", selectedProduct.title);
+      setValue("description", selectedProduct.description);
+      setValue("brand", selectedProduct.brand);
+      setValue("category", selectedProduct.category);
+      setValue("price", selectedProduct.price);
+      setValue("discountPercentage", selectedProduct.discountPercentage);
+      setValue("stock", selectedProduct.stock);
+      setValue("thumbnail", selectedProduct.thumbnail);
+      setValue(
+        "image1",
+        selectedProduct.images[0] ?? selectedProduct.thumbnail
+      );
+      setValue(
+        "image2",
+        selectedProduct.images[1] ?? selectedProduct.thumbnail
+      );
+      setValue(
+        "image3",
+        selectedProduct.images[2] ?? selectedProduct.thumbnail
+      );
+      setValue(
+        "image4",
+        selectedProduct.images[3] ?? selectedProduct.thumbnail
+      );
+    }
+  }, [selectedProduct]);
   return (
     <form
       noValidate
@@ -33,9 +78,17 @@ const ProductForm = () => {
         delete product["image2"];
         delete product["image3"];
         delete product["image4"];
+        product.price = +product.price;
+        product.stock = +product.stock;
+        product.discountPercentage = +product.discountPercentage;
         console.log(product);
-
-        dispatch(createProductAsync(product));
+        if (params.id) {
+          product.id = params.id;
+          product.rating = +selectedProduct.rating || 0;
+          dispatch(updateProductAsync(product));
+        } else {
+          dispatch(createProductAsync(product));
+        }
       })}
     >
       <div className="space-y-12 bg-white p-12">

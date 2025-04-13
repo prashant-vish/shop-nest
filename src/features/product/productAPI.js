@@ -27,6 +27,22 @@ export function createProduct(product) {
   });
 }
 
+export function updateProduct(update) {
+  return new Promise(async (resolve) => {
+    const response = await fetch(
+      "http://localhost:8080/products/" + update.id,
+      {
+        method: "PATCH",
+        body: JSON.stringify(update),
+        headers: { "content-type": "application/json" },
+      }
+    );
+    const data = await response.json();
+    // Todo: ON server it will only return some info of user (not password)
+    resolve({ data });
+  });
+}
+
 async function fetchTotalItems() {
   const response = await fetch("http://localhost:8080/products?");
   const data = await response.json();
