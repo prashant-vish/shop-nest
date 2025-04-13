@@ -29,14 +29,13 @@ const ProductForm = () => {
   useEffect(() => {
     if (params.id) {
       dispatch(fetchProductByIdAsync(params.id));
-    }
-    else{
-      dispatch(clearSelectedProduct())
+    } else {
+      dispatch(clearSelectedProduct());
     }
   }, [dispatch, params.id]);
 
   useEffect(() => {
-    if (selectedProduct) {
+    if (selectedProduct && params.id) {
       setValue("title", selectedProduct.title);
       setValue("description", selectedProduct.description);
       setValue("brand", selectedProduct.brand);
@@ -62,7 +61,7 @@ const ProductForm = () => {
         selectedProduct.images[3] ?? selectedProduct.thumbnail
       );
     }
-  }, [selectedProduct]);
+  }, [selectedProduct, setValue, params.id]);
   return (
     <form
       noValidate

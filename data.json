@@ -68,7 +68,7 @@
       "title": "Eyeshadow Palette with Mirror",
       "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
       "category": "beauty",
-      "price": 940,
+      "price": 100,
       "discountPercentage": 10,
       "rating": 3.28,
       "stock": 44,
@@ -254,8 +254,8 @@
       "title": "Red Nail Polish",
       "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
       "category": "beauty",
-      "price": 8.99,
-      "discountPercentage": 2.46,
+      "price": 10,
+      "discountPercentage": 10,
       "rating": 3.91,
       "stock": 71,
       "tags": [
@@ -305,7 +305,10 @@
         "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
       },
       "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
     },
