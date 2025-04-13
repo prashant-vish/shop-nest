@@ -56,6 +56,8 @@ export function fetchAllProductsByFilters(filter, sort, pagination) {
 
   // Pagination page={_page:1,_limit:10}
   //Todo: on server we will support multiple values in filters
+  // todo: on server we will filter all the deleted products
+  
 
   let queryString = "";
   for (let key in filter) {

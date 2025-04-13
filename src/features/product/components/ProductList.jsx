@@ -100,6 +100,8 @@ const ProductList = () => {
     // It should be this.
     const pagination = { _page: page, _per_page: ITEM_PER_PAGE };
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
+
+    // todo: server will filter deleted Products
   }, [dispatch, filter, sort, page]);
   // This will work when in productsApi this will be made
   // const totalItems = await response.headers.get("X-Total-Count");
@@ -547,6 +549,11 @@ function ProductGrid({ products }) {
                       </p>
                     </div>
                   </div>
+                  {product.deleted && (
+                    <div>
+                      <p className="text-sm text-red-400">Product Deleted</p>
+                    </div>
+                  )}
                 </div>
               </Link>
             ))}

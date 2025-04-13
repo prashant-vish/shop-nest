@@ -18,6 +18,7 @@ const ProductForm = () => {
   const {
     register,
     setValue,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -62,9 +63,16 @@ const ProductForm = () => {
       );
     }
   }, [selectedProduct, setValue, params.id]);
+
+  const handleDelete = () => {
+    const product = { ...selectedProduct };
+    product.deleted = true;
+    dispatch(updateProductAsync(product));
+  };
   return (
     <form
       noValidate
+
       onSubmit={handleSubmit((data) => {
         const product = { ...data };
         product.images = [
@@ -73,6 +81,7 @@ const ProductForm = () => {
           product.image3,
           product.thumbnail,
         ];
+        product.rating = 0;
         delete product["image1"];
         delete product["image2"];
         delete product["image3"];
@@ -85,8 +94,11 @@ const ProductForm = () => {
           product.id = params.id;
           product.rating = +selectedProduct.rating || 0;
           dispatch(updateProductAsync(product));
+          reset();
         } else {
           dispatch(createProductAsync(product));
+          reset();
+          //todo: on product successfully added clear fields and show a message
         }
       })}
     >
@@ -362,6 +374,14 @@ const ProductForm = () => {
         <button type="button" className="text-sm/6 font-semibold text-gray-900">
           Cancel
         </button>
+        {selectedProduct && (
+          <button
+            onClick={handleDelete}
+            className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Delete
+          </button>
+        )}
         <button
           type="submit"
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
