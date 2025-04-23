@@ -6332,7 +6332,7 @@
           "name": "Mohit Vishwakarma",
           "email": "mohitvishwakarma24092001@gmail.com",
           "phone": "8840992961",
-          "street": "VILL-MALIKPUR  POST-SAIDPUR  DIST-GHAZIPUR",
+          "street": "VILL-MALIKPUR ",
           "city": "Ghazipur",
           "state": "Uttar Pradesh",
           "pinCode": "233304"
@@ -6347,70 +6347,7 @@
       "role": "admin"
     }
   ],
-  "cart": [
-    {
-      "id": "dda1",
-      "title": "Essence Mascara Lash Princess",
-      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-      "category": "beauty",
-      "price": 9.99,
-      "discountPercentage": 7.17,
-      "rating": 4.94,
-      "stock": 5,
-      "tags": [
-        "beauty",
-        "mascara"
-      ],
-      "brand": "Essence",
-      "sku": "RCH45Q1A",
-      "weight": 2,
-      "dimensions": {
-        "width": 23.17,
-        "height": 14.43,
-        "depth": 28.01
-      },
-      "warrantyInformation": "1 month warranty",
-      "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "Low Stock",
-      "reviews": [
-        {
-          "rating": 2,
-          "comment": "Very unhappy with my purchase!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "John Doe",
-          "reviewerEmail": "john.doe@x.dummyjson.com"
-        },
-        {
-          "rating": 2,
-          "comment": "Not as described!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Nolan Gonzalez",
-          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Very satisfied!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Scarlett Wright",
-          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "30 days return policy",
-      "minimumOrderQuantity": 24,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.618Z",
-        "updatedAt": "2024-05-23T08:56:21.618Z",
-        "barcode": "9164035109868",
-        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
-      "quantity": 1,
-      "user": "53b0"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "d5ce",
@@ -6515,7 +6452,7 @@
         "state": "Uttar Pradesh",
         "pinCode": "334444"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "f5e9",
@@ -6647,7 +6584,7 @@
           "user": "4a5c"
         }
       ],
-      "totalAmount": 149.98000000000002,
+      "totalAmount": 149.98,
       "totalItems": 2,
       "user": {
         "id": "4a5c",
@@ -6670,12 +6607,12 @@
         "name": "Mohit Vishwakarma",
         "email": "mohitvishwakarma24092001@gmail.com",
         "phone": "8840992961",
-        "street": "VILL-MALIKPUR  POST-SAIDPUR  DIST-GHAZIPUR",
+        "street": "VILL-MALIKPUR",
         "city": "Ghazipur",
         "state": "Uttar Pradesh",
         "pinCode": "233304"
       },
-      "status": "pending"
+      "status": "delivered"
     },
     {
       "id": "34d3",
@@ -6756,7 +6693,7 @@
             "name": "Prashant Vishwakarma",
             "email": "vishwakarma0216@gmail.com",
             "phone": "09838574409",
-            "street": "Kamla Nehru Institute of technology, Ramanujan C06",
+            "street": "Ramanujan C06",
             "city": "Sultanpur",
             "state": "Uttar Pradesh",
             "pinCode": "228118"
@@ -6777,12 +6714,12 @@
         "name": "Prashant Vishwakarma",
         "email": "vishwakarma0216@gmail.com",
         "phone": "09838574409",
-        "street": "Kamla Nehru Institute of technology, Ramanujan C06",
+        "street": " Ramanujan C06",
         "city": "Sultanpur",
         "state": "Uttar Pradesh",
         "pinCode": "228118"
       },
-      "status": "pending"
+      "status": "cancelled"
     },
     {
       "id": "c6f4",
@@ -6948,7 +6885,7 @@
           "user": "53b0"
         }
       ],
-      "totalAmount": 209.96999999999997,
+      "totalAmount": 209.96,
       "totalItems": 3,
       "user": {
         "id": "53b0",
@@ -7057,6 +6994,114 @@
         "id": "53b0",
         "email": "vishwakarma0216@gmail.com",
         "password": "Prashant@320",
+        "addresses": [
+          {
+            "name": " Nishant Vishwakarma",
+            "email": "nishant@gmail.com",
+            "phone": "8840882821",
+            "street": "12th maini",
+            "city": "Prayagraj",
+            "state": "Uttar Pradesh",
+            "pinCode": "334444"
+          },
+          {
+            "name": "Jack Murphy",
+            "email": "jack@gmail.com",
+            "city": "Los Angeles",
+            "state": "New York",
+            "phone": "9000002222",
+            "street": "12th main Los Angeles",
+            "pinCode": "122220"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Jack Murphy",
+        "email": "jack@gmail.com",
+        "city": "Los Angeles",
+        "state": "New York",
+        "phone": "9000002222",
+        "street": "12th main Los Angeles",
+        "pinCode": "122220"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "548a",
+      "items": [
+        {
+          "id": "5b08",
+          "title": "Dior J'adore",
+          "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+          "category": "fragrances",
+          "price": 89.99,
+          "discountPercentage": 17.44,
+          "rating": 3.31,
+          "stock": 91,
+          "tags": [
+            "fragrances",
+            "perfumes"
+          ],
+          "brand": "Dior",
+          "sku": "E70NB03B",
+          "weight": 10,
+          "dimensions": {
+            "width": 21.51,
+            "height": 7,
+            "depth": 26.51
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Zoe Nicholson",
+              "reviewerEmail": "zoe.nicholson@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Addison Wright",
+              "reviewerEmail": "addison.wright@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Clara Berry",
+              "reviewerEmail": "clara.berry@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 8,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "0887083199279",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/1.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/2.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png",
+          "quantity": 1,
+          "user": "53b0"
+        }
+      ],
+      "totalAmount": 88,
+      "totalItems": 1,
+      "user": {
+        "id": "53b0",
+        "email": "vishwakarma0216@gmail.com",
+        "password": "Prashant@320",
+        "role": "user",
         "addresses": [
           {
             "name": " Nishant Vishwakarma",
