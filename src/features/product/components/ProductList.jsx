@@ -454,7 +454,7 @@ function ProductGrid({ products }) {
                     </div>
                     <div>
                       <p className="text-sm block font-medium text-gray-900">
-                        ${discountedPrice(product )}
+                        ${discountedPrice(product)}
                       </p>
                       <p className="text-sm line-through block font-medium text-gray-400">
                         ${product.price}
@@ -466,6 +466,12 @@ function ProductGrid({ products }) {
                       <p className="text-sm text-red-400">Product Deleted</p>
                     </div>
                   )}
+                  {product.stock <= 0 && (
+                    <div>
+                      <p className="text-sm text-red-400">Out of Stock</p>
+                    </div>
+                  )}
+                  {/* // Todo : Will not be needed when backend is implemented */}
                 </div>
               </Link>
             ))}
