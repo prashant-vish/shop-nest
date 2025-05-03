@@ -12,9 +12,11 @@ const UserOrders = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUserInfo);
   const orders = useSelector(selectUserOrders);
+  
   useEffect(() => {
     dispatch(fetchLoggedInUserOrderAsync(user.id));
   }, [dispatch, user]);
+
   return (
     <div>
       {orders.map((order) => (

@@ -8,6 +8,8 @@ import { addToCartAsync, selectItems } from "../../cart/cartSlice";
 import { selectLoggedInUser } from "../../auth/authSlice";
 import { discountedPrice } from "../../../app/constants";
 
+import { useAlert } from "react-alert";
+
 //Todo: In server data we willl add colors , sizes,highlights etc,
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -43,6 +45,7 @@ export default function ProductDetail() {
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
+  const alert = useAlert();
 
   const handleCart = (e) => {
     e.preventDefault();
@@ -56,8 +59,10 @@ export default function ProductDetail() {
       };
       delete newItem["id"];
       dispatch(addToCartAsync(newItem));
+      // Todo : it will based on server backend response
+      alert.success("Item Added to Cart");
     } else {
-      console.log("already added");
+      alert.error("Item Already Added");
     }
   };
 
@@ -276,7 +281,7 @@ export default function ProductDetail() {
                 <button
                   onClick={handleCart}
                   type="submit"
-                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+                  className="mt-10 cursor-pointer flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
                 >
                   Add to Cart
                 </button>

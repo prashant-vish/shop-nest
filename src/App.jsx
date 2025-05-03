@@ -24,6 +24,14 @@ import AdminHome from "./pages/AdminHome";
 import AdminProductFormPage from "./pages/AdminProductFormPage";
 import AdminOrdersPage from "./pages/AdminOrdersPage";
 
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
+const options = {
+  timeout: 5000,
+  position: positions.BOTTOM_LEFT,
+};
+
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
@@ -37,88 +45,90 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Protected>
-              <Home />
-            </Protected>
-          }
-        ></Route>
-        <Route
-          path="/admin"
-          element={
-            <ProtectedAdmin>
-              <AdminHome />
-            </ProtectedAdmin>
-          }
-        ></Route>
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route
-          path="/cart"
-          element={
-            <Protected>
-              <Cart />
-            </Protected>
-          }
-        />
-        <Route
-          path="/checkout"
-          element={
-            <Protected>
-              <Checkout />
-            </Protected>
-          }
-        />
-        <Route
-          path="/product-detail/:id"
-          element={
-            <Protected>
-              <ProductDetailPage />
-            </Protected>
-          }
-        />
-        <Route
-          path="/admin/product-form"
-          element={
-            <ProtectedAdmin>
-              <AdminProductFormPage />
-            </ProtectedAdmin>
-          }
-        />
-        <Route
-          path="/admin/product-form/edit/:id"
-          element={
-            <ProtectedAdmin>
-              <AdminProductFormPage />
-            </ProtectedAdmin>
-          }
-        />
-        <Route
-          path="/admin/orders"
-          element={
-            <ProtectedAdmin>
-              <AdminOrdersPage />
-            </ProtectedAdmin>
-          }
-        />
-        <Route
-          path="/admin/product-detail/:id"
-          element={
-            <ProtectedAdmin>
-              <AdminProductDetailPage />
-            </ProtectedAdmin>
-          }
-        />
-        <Route path="/order-success/:id" element={<OrderSuccessPage />} />
-        <Route path="/orders" element={<UserOrdersPage />} />
-        <Route path="/profile" element={<UserProfilePage />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <Provider template={AlertTemplate} {...options}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Protected>
+                <Home />
+              </Protected>
+            }
+          ></Route>
+          <Route
+            path="/admin"
+            element={
+              <ProtectedAdmin>
+                <AdminHome />
+              </ProtectedAdmin>
+            }
+          ></Route>
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/cart"
+            element={
+              <Protected>
+                <Cart />
+              </Protected>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <Protected>
+                <Checkout />
+              </Protected>
+            }
+          />
+          <Route
+            path="/product-detail/:id"
+            element={
+              <Protected>
+                <ProductDetailPage />
+              </Protected>
+            }
+          />
+          <Route
+            path="/admin/product-form"
+            element={
+              <ProtectedAdmin>
+                <AdminProductFormPage />
+              </ProtectedAdmin>
+            }
+          />
+          <Route
+            path="/admin/product-form/edit/:id"
+            element={
+              <ProtectedAdmin>
+                <AdminProductFormPage />
+              </ProtectedAdmin>
+            }
+          />
+          <Route
+            path="/admin/orders"
+            element={
+              <ProtectedAdmin>
+                <AdminOrdersPage />
+              </ProtectedAdmin>
+            }
+          />
+          <Route
+            path="/admin/product-detail/:id"
+            element={
+              <ProtectedAdmin>
+                <AdminProductDetailPage />
+              </ProtectedAdmin>
+            }
+          />
+          <Route path="/order-success/:id" element={<OrderSuccessPage />} />
+          <Route path="/orders" element={<UserOrdersPage />} />
+          <Route path="/profile" element={<UserProfilePage />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Provider>
     </BrowserRouter>
   );
 }
