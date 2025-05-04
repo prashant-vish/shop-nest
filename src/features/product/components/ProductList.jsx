@@ -8,6 +8,7 @@ import {
   selectCategories,
   fetchBrandsAsync,
   fetchCategoriesAsync,
+  selectProductListStatus,
 } from "../productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
@@ -36,6 +37,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import { discountedPrice, ITEM_PER_PAGE } from "../../../app/constants";
 import Pagination from "../../common/Pagination";
+import { Grid } from "react-loader-spinner";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -54,6 +56,7 @@ const ProductList = () => {
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
   const totalItems = useSelector(selectTotalItems);
+  const status = useSelector(selectProductListStatus);
   const filters = [
     {
       id: "category",
@@ -196,7 +199,7 @@ const ProductList = () => {
               <div className="lg:col-span-3">
                 {/* Your content */}
 
-                <ProductGrid products={products} />
+                <ProductGrid products={products} status={status} />
               </div>
             </div>
           </section>
@@ -414,7 +417,7 @@ function DesktopFilter({ handleFilter, filters }) {
   );
 }
 
-function ProductGrid({ products }) {
+function ProductGrid({ products, status }) {
   return (
     <>
       {/* this is our products page */}
@@ -425,56 +428,69 @@ function ProductGrid({ products }) {
                         </h2> */}
 
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 ">
-            {products.map((product) => (
-              <Link to={`/product-detail/${product.id}`}>
-                <div
-                  key={product.id}
-                  className=" group relative border-solid border-2 border-gray-200 p-1 rounded-sm"
-                >
-                  <img
-                    alt={product.title}
-                    src={product.thumbnail}
-                    className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
-                  />
-                  <div className="mt-4 flex justify-between">
-                    <div>
-                      <h3 className="text-sm text-gray-700">
-                        <div href={product.thumbnail}>
-                          <span
-                            aria-hidden="true"
-                            className="absolute inset-0"
-                          />
-                          {product.title}
-                        </div>
-                      </h3>
-                      <p className="mt-1 text-sm text-gray-500">
-                        <StarIcon className="w-6 h-6 inline"></StarIcon>
-                        <span className="align-bottom">{product.rating}</span>
-                      </p>
+            {status === "loading" ? (
+              <Grid
+                visible={true}
+                height="80"
+                width="80"
+                color="rgb(79,70, 229)"
+                ariaLabel="grid-loading"
+                radius="12.5"
+                wrapperStyle={{}}
+                wrapperClass="grid-wrapper"
+              />
+            ) : (
+              products.map((product) => (
+                <Link to={`/product-detail/${product.id}`}>
+                  <div
+                    key={product.id}
+                    className=" group relative border-solid border-2 border-gray-200 p-1 rounded-sm"
+                  >
+                    <img
+                      alt={product.title}
+                      src={product.thumbnail}
+                      className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
+                    />
+                    <div className="mt-4 flex justify-between">
+                      <div>
+                        <h3 className="text-sm text-gray-700">
+                          <div href={product.thumbnail}>
+                            <span
+                              aria-hidden="true"
+                              className="absolute inset-0"
+                            />
+                            {product.title}
+                          </div>
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-500">
+                          <StarIcon className="w-6 h-6 inline"></StarIcon>
+                          <span className="align-bottom">{product.rating}</span>
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm block font-medium text-gray-900">
+                          ${discountedPrice(product)}
+                        </p>
+                        <p className="text-sm line-through block font-medium text-gray-400">
+                          ${product.price}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm block font-medium text-gray-900">
-                        ${discountedPrice(product)}
-                      </p>
-                      <p className="text-sm line-through block font-medium text-gray-400">
-                        ${product.price}
-                      </p>
-                    </div>
+                    {product.deleted && (
+                      <div>
+                        <p className="text-sm text-red-400">Product Deleted</p>
+                      </div>
+                    )}
+                    {product.stock <= 0 && (
+                      <div>
+                        <p className="text-sm text-red-400">Out of Stock</p>
+                      </div>
+                    )}
+                    {/* // Todo : Will not be needed when backend is implemented */}
                   </div>
-                  {product.deleted && (
-                    <div>
-                      <p className="text-sm text-red-400">Product Deleted</p>
-                    </div>
-                  )}
-                  {product.stock <= 0 && (
-                    <div>
-                      <p className="text-sm text-red-400">Out of Stock</p>
-                    </div>
-                  )}
-                  {/* // Todo : Will not be needed when backend is implemented */}
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))
+            )}
           </div>
         </div>
       </div>

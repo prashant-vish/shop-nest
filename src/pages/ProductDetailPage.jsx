@@ -4,12 +4,14 @@ import ProductDetail from "../features/product/components/ProductDetail";
 
 const ProductDetailPage = () => {
   return (
-    <div>
-      <Navbar>
-        <ProductDetail></ProductDetail>
-      </Navbar>
-      <Footer />
-    </div>
+    <>
+      <div>
+        <Navbar>
+          <ProductDetail></ProductDetail>
+        </Navbar>
+        <Footer />
+      </div>
+    </>
   );
 };
 

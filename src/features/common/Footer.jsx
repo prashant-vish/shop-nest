@@ -3,11 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className=" bg-gray-800">
+      <div className=" bg-gray-800 ">
         <div className="max-w-2xl mx-auto text-white py-10">
           <div className="text-center">
             <h3 className="text-4xl mb-3"> Download our Ecommerce app </h3>
-            <p> Buy whatever you Desire. Everything at Doorstep! </p>
+            <p> Buy whatever you Desirex. Everything at Doorstep! </p>
             <div className="flex justify-center my-10">
               <div className="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
                 <img

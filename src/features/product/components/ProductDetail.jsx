@@ -2,13 +2,18 @@ import { useEffect, useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductByIdAsync, selectProductById } from "../productSlice";
+import {
+  fetchProductByIdAsync,
+  selectProductById,
+  selectProductListStatus,
+} from "../productSlice";
 import { useParams } from "react-router-dom";
 import { addToCartAsync, selectItems } from "../../cart/cartSlice";
 import { selectLoggedInUser } from "../../auth/authSlice";
 import { discountedPrice } from "../../../app/constants";
 
 import { useAlert } from "react-alert";
+import { Grid } from "react-loader-spinner";
 
 //Todo: In server data we willl add colors , sizes,highlights etc,
 const colors = [
@@ -46,6 +51,7 @@ export default function ProductDetail() {
   const dispatch = useDispatch();
   const params = useParams();
   const alert = useAlert();
+  const status = useSelector(selectProductListStatus);
 
   const handleCart = (e) => {
     e.preventDefault();
@@ -73,6 +79,18 @@ export default function ProductDetail() {
   console.log({ items });
   return (
     <div className="bg-white">
+      {status === "loading" ? (
+        <Grid
+          visible={true}
+          height="80"
+          width="80"
+          color="rgb(79,70, 229)"
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass="grid-wrapper"
+        />
+      ) : null}
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
