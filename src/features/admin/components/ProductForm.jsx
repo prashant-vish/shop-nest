@@ -111,7 +111,7 @@ const ProductForm = () => {
             </h2>
 
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              {selectedProduct.deleted && (
+              {selectedProduct && selectedProduct?.deleted && (
                 <h2 className="sm:col-span-full text-red-500">
                   {" "}
                   This product is deleted!
@@ -385,7 +385,7 @@ const ProductForm = () => {
           >
             Cancel
           </button>
-          {selectedProduct && !selectedProduct.deleted && (
+          {selectedProduct && !selectedProduct?.deleted && (
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -404,15 +404,17 @@ const ProductForm = () => {
           </button>
         </div>
       </form>
-      <Modal
-        title={`Delete ${selectedProduct.title}?`}
-        message={"Are you Sure to delete this Product?"}
-        dangerOption={"Delete"}
-        cancelOption={"Cancel"}
-        dangerAction={handleDelete}
-        cancelAction={() => setOpenModal(null)}
-        showModal={openModal}
-      />
+      {selectedProduct && (
+        <Modal
+          title={`Delete ${selectedProduct.title}?`}
+          message={"Are you Sure to delete this Product?"}
+          dangerOption={"Delete"}
+          cancelOption={"Cancel"}
+          dangerAction={handleDelete}
+          cancelAction={() => setOpenModal(null)}
+          showModal={openModal}
+        />
+      )}
     </>
   );
 };
