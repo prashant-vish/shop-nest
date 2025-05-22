@@ -104,7 +104,6 @@ const ProductList = () => {
     // It should be this.
     const pagination = { _page: page, _per_page: ITEM_PER_PAGE };
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
-
     // todo: server will filter deleted Products
   }, [dispatch, filter, sort, page]);
   // This will work when in productsApi this will be made
